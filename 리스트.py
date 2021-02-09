@@ -83,6 +83,21 @@ print(a)
 
 print(sorted(a))  # sorted는 원형을 변형시키지 않고 정렬된 리스트를 반환함
 
-print(reversed(a)) #reversed는 원형을 변형시키지 않고 거꾸로 뒤집어 반환 -> iterable한 객체를 반환하기 때문에 list로 확인해야됨
-print(list(reversed(a))) # 이런식으로 list로 확인
-#ad
+print(reversed(a))  # reversed는 원형을 변형시키지 않고 거꾸로 뒤집어 반환 -> iterable한 객체를 반환하기 때문에 list로 확인해야됨
+print(list(reversed(a)))  # 이런식으로 list로 확인
+
+# 리스트 컴프리헨션
+a = [i for i in range(10)]
+print(a)
+
+a = list(i for i in range(10))
+print(a)
+
+a = [i * 2 for i in range(10)]
+print(a)
+
+a = [i * 2 for i in range(10) if i % 2 == 0] # 0~9까지 생성을 하는데 그 중 2로나눈 나머지가 0인 수를 2를 곱해서 리스트에 저장
+print(a)
+
+a = [i*j for i in range(2,10) for j in range(1,10)] # 이런건 뒤에서 부터 시작함(뒤에꺼 다돌고 앞에꺼하나늘고 이런식)
+print(a)
