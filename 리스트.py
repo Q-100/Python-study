@@ -79,7 +79,7 @@ a.sort()  # 인자가 없으면 오름차순으로 정렬
 print(a)
 a.sort(reverse=True)  # 이런식으로 하면 내림차순
 print(a)
-# a.sort(key=len) # 이거 다시공부하기
+# a.sort(key=len) # TODO 이거 다시공부하기
 
 print(sorted(a))  # sorted는 원형을 변형시키지 않고 정렬된 리스트를 반환함
 
