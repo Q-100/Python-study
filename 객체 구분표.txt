@@ -13,3 +13,8 @@ float       |	실수	                                |   immutable
 tuple       |	immutable 한 순서가 있는 객체 집합	    |   immutable
 str         |	문자열	                            |   immutable
 frozenset   |	immutable한 set	                    |   immutable
+
+list        |   순서있음
+tuple       |   순서있음
+dictionary  |   순서없음
+set         |   순서없음
