@@ -1,8 +1,9 @@
-s = str(input())
-s_len = len(s)
+a = map(int, input().split())
+def check(a):
+    for c in a:
+        if c == 0:
+            return
+        else:
+            print(c)
 
-for i in s:
-    s_len = s_len-1
-    for j in range(s_len):
-        i = int(i)*10
-    print("[{i}]".format(i=i))
+check(a)
