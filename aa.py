@@ -1,9 +1,7 @@
-a = map(int, input().split())
-def check(a):
-    for c in a:
-        if c == 0:
-            return
-        else:
-            print(c)
+n = int(input())
+a = map(int,input().split())
+s = [0 for i in range(23)]
+for i in a:
+    s[i-1] += 1
 
-check(a)
+print(s)
