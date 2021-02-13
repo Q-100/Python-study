@@ -1,5 +1,5 @@
 h, w = map(int, input().split())
-s = [[0 for i in range(h)] for j in range(w)]
+s = [[0 for i in range(w)] for j in range(h)]
 
 n = int(input())
 for i in range(n):
