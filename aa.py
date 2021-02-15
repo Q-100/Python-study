@@ -29,4 +29,4 @@ while check == 0:
 for i in range(len(s)):
     for j in range(len(s[i])):
         print(s[i][j],end =" ")
-    print()
+    print(" ")
