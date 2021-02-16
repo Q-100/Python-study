@@ -1,7 +1,7 @@
 s = []
 for i in range(10):
     s.append(list(map(int, input().split())))
-x,y = 1,1
+x, y = 1, 1
 check = 0
 if s[x][y] == 2:
     check = 1
@@ -28,5 +28,8 @@ while check == 0:
 
 for i in range(len(s)):
     for j in range(len(s[i])):
-        print(s[i][j],end =" ")
+        print(s[i][j], end=" ")
     print(" ")
+
+for j in range(10):
+    print(s, end=' ')
