@@ -9,3 +9,10 @@ def test(b: str) -> str:  # 이런식으로 파라미터와 리턴의 형태를 
 # 하지만 힌트는 힌트일뿐 동적으로 입력이 됨
 
 print([n * 2 for n in range(10) if n % 2 == 0])
+
+
+def get_natural_number():
+    n = 0
+    while True:
+        n += 1
+        yield n
