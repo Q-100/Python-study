@@ -159,9 +159,26 @@ x = {'name': "김규백", "age": "30", "address": "서울시"}
 
 
 def personal1(**kwargs):
-    print('이름:', name)
-    print('나이:', age)
-    print('주소:', address)
+    """
+    키워드인수(name="규백"이런거)를 사용할 때 가변인자를 사용하기위한 방법
+    보통 함수안에 특정 키가 있느지 확인할 때 사용
+
+    *을 한개만 사용하게되면 딕셔너리의 키값이 반환됨
+    ex) x = {'name': "김규백", "age": "30", "address": "서울시"} 에서 name,age 등만 나옴
+    :param kwargs: 키워드인수(인자로 넘길때 이름을 가지고 넘기는것 또는 딕셔너리)
+    :return: 키워드인수로 넘어온 인자를 출력
+    """
+    for kw, arg in kwargs.items():
+        print(kw, ":", arg)
 
 
-personal1(**x)
+personal1(**x)  # personal1(name= "김규백", age= "30", address= "서울시")와 같은 의미
+
+
+# personal1(name = "홍길동") 이렇게 사용하거나 위처럼 **두개 붙여서 사용(사용방법은 총 2가지 : **로 통째로 넘기거나 키워드인수 자체를 넘김
+
+def custom_print(*args, **kwargs):
+    print(*args, **kwargs)
+
+
+custom_print(1, 2, 3, sep=":", end=" ")
