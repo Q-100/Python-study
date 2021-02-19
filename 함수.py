@@ -74,18 +74,94 @@ def test7(departure, arrival, flighttime):  # 딕셔너리는 **로 사용가능
 a = {"departure": "seoul", "arrival": "newyork", "flighttime": 3}
 test7(**a)
 
-test7(**{"departure": "seoul", "arrival": "newyork", "flighttime": 3}) # 이런식으로 직접 입력가능
+test7(**{"departure": "seoul", "arrival": "newyork", "flighttime": 3})  # 이런식으로 직접 입력가능
 
-def test8(**k): # 이렇게도 가능(근데 별두개 없애고 쓰는거랑 똑같음 ㅡㅡ)
+
+def test8(**k):  # 이렇게도 가능(근데 별두개 없애고 쓰는거랑 똑같음 ㅡㅡ)
     print("출발지는", k['departure'])
     print("도착지는", k["arrival"])
     print("비행시간은 ", k['flighttime'])
 
+
 test8(**a)
 k = 1
+
+
 def terst9():
     k = 5
     print(k)
 
+
 terst9()
 print(k)
+
+
+def pass_test():
+    """
+    파이썬은 함수내용을 적지않으면 오류가남 나중에 추가할 거면 pass로 일단 해놔야됨
+    """
+    pass
+
+
+print(pass_test.__doc__)  # 독스트링 출력
+help(pass_test)  # help에 함수를 넣으면 함수의 이름, 매개변수, 독스트링을 도움말 형태로 출력해줌
+
+
+def add_sub(a, b):  # 반환 값으로 여러개를 할 수 있음(튜플로 반환)
+    return a + b, a - b
+
+
+x = add_sub(5, 2)  # 한개의 변수에 튜플로 저장됨(갯수에 맞게 하면 각자 언패킹되서 들어감)
+print(x)
+
+
+def print_number(*args):
+    """
+    매개변수 앞에 *을 붙이면 유동적으로 매개변수를 받을 수 있음
+    :param args: 반복이 가능한 형태 갯수 아무거나
+    :return: 출력
+    """
+    for arg in args:
+        print(arg)
+
+
+x = [1]
+print_number(x)
+y = [1, 2, 3, 4]
+print_number(y)
+
+
+def print_number1(a, *args):
+    """
+    다음 처럼 꼭 받아야하는 고정인수가 있을 경우 이렇게 받을 수 있음
+    대신 가변인수가 고정인수보다 앞에 있으면 안됨
+    :param a: 따로 받아야하는 인수
+    :param args: 갯수 상관없이 받는 인수
+    :return: 출력
+    """
+    print(a)
+    print(args)
+
+
+print_number1(x)  # 이런식으로 가변인수에는 값이 없어도됨
+
+
+def personal(name, age, address):
+    print('이름:', name)
+    print('나이:', age)
+    print('주소:', address)
+
+
+personal(age=30, address="서울", name="김규백")  # 키워드 인수를 이용하여 인자 순서에 맞지않게 넣을 수 있음
+# print(10,20,30,sep=":",end=" ") 여기서 sep과 end도 키워드 인수임
+
+x = {'name': "김규백", "age": "30", "address": "서울시"}
+
+
+def personal1(**kwargs):
+    print('이름:', name)
+    print('나이:', age)
+    print('주소:', address)
+
+
+personal1(**x)
