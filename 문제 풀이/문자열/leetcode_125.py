@@ -10,5 +10,9 @@ class Solution:
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = s.lower()
+        import re
         s = re.sub("[^a-z0-9]", "", s)
         return s == s[::-1]
+
+# 3.20 둘다못함
+# 4. 6 두번째만 함
