@@ -10,3 +10,5 @@ for z in a:
 
 for i, v in enumerate(a): # enumerate는 인덱스와 값을 같이 출력해줌
     print(i, v)
+
+print(list(enumerate(a))) # 인덱스에 맞는 리스트를 만들어줌
