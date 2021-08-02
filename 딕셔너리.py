@@ -46,3 +46,12 @@ aa = {'0': 'AA', '1': 'BB', '2': 'CC'}  # 자주 value값을 찾아야된다면 
 bb = {v: k for k, v in aa.items()}  # {'AA': '0', 'BB': '1', 'CC': '2'}
 print(bb["AA"])
 
+a = {}
+a["A"] = 1
+a["b"] = 2
+print(a)
+
+a = [1, 2, 3, 4, 5, 5, 5, 6, 6]
+b = collections.Counter(a)
+print(b[5] # 5의 갯수 출력
+print(b.most_common(2)) # 가장 많은 갯수를 가진 요소 2개 출력
