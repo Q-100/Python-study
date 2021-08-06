@@ -1,6 +1,9 @@
-import re
+import collections
+strs = ["eat","tea","tan","ate","nat","bat"]
 
-s = "A man, a plan, a canal: Panama"
-s = s.lower()
-tmp = re.sub("[^a-z0-9]","",s)
+a = collections.defaultdict(list)
 
+for word in strs:
+    a["".join(sorted(word))].append(word)
+
+print(a.values())
