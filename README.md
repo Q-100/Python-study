@@ -1,5 +1,5 @@
 # Today I learned(TIL) about Coding Test.
-> 파이썬 알고리즘 인터뷰를 공부하면서 헷갈렸엇거나 몰랐던 내용들을 적고 있습니다.
+> 파이썬 알고리즘 인터뷰를 공부하면서 헷갈렸엇거나 몰랐던 내용들
 ___
 ## 파이썬
 - [Type Hint](알고리즘%20인터뷰/type_hint.md)
